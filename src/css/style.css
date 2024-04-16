@@ -65,10 +65,10 @@
 .topNavItem a:last-child:hover:after,.bottomNavItem a:last-child:hover:after{    
     width: 0;
 }
-#language-picker-select{
+/* #language-picker-select{
     background: transparent;
     padding: 12px; 
-}
+} */
 /* bottomNavbar */
 .bottomNavItem a{
     width: fit-content;
@@ -76,6 +76,17 @@
 .bottomNavItem a:last-child:hover{
     color: #fff;
 }
+#languageDropdown,#languageDropdownDsk{
+    z-index: 100;
+}
+.item{
+    background: #fff;
+    transition: all linear 0.1s;
+}
+.item:hover{
+    background: #d6d5d5;
+}
+
 /* ======| Navbar css end |====== */
 /* ======| brand start |====== */
 .brand_logos_slide {

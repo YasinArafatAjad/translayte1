@@ -23,14 +23,27 @@
                 </div>
                 <div class="logo lg:hidden">
                     <a href="#"><img src="./src/img/mobile_logo.svg" class="md:w-4/5 xl:w-full"/></a>
-                </div> 
-                <form action="" class="language_picker_form">
-                    <select name="language-picker-select" id="language-picker-select" class="border-0 p-2 focus:border-none focus:ring-0">
-                      <option lang="en" value="english" selected>EN</option>
-                      <option lang="de" value="deutsch">DE</option>
-                      <option lang="fr" value="francais">FR</option>
-                    </select>
-                </form>
+                </div>
+                <div id="languagePicker" class="relative inline-block">
+                    <div id="languagePickerButton" class="bg-white text-gray-800 font-semibold py-2 px-3 flex items-center gap-x-2  focus:outline-none">
+                        <img src="./src/img/uk.svg" alt="English Flag" class="selectedLanImg w-6 h-4">
+                        <span class="selectedLan mr-2">En</span>
+                    </div>
+                    <div id="languageDropdown" class="absolute hidden mt-2">
+                        <div class="item bg-teal-500 hover:bg-[#d5d1d1] text-gray-800 font-semibold py-2 px-3 flex items-center gap-x-2  focus:outline-none">
+                            <img src="./src/img/uk.svg" alt="English Flag" class="selectedLanImg w-6 h-4">
+                            <span class="selectedLan mr-2">Bn</span>
+                        </div>
+                        <div class="item bg-teal-500 hover:bg-[#fff] text-gray-800 font-semibold py-2 px-3 flex items-center gap-x-2  focus:outline-none">
+                            <img src="./src/img/uk.svg" alt="English Flag" class="selectedLanImg w-6 h-4">
+                            <span class="selectedLan mr-2">De</span>
+                        </div>
+                        <div class="item bg-teal-500 hover:bg-[#fff] text-gray-800 font-semibold py-2 px-3 flex items-center gap-x-2  focus:outline-none">
+                            <img src="./src/img/uk.svg" alt="English Flag" class="selectedLanImg w-6 h-4">
+                            <span class="selectedLan mr-2">Fr</span>
+                        </div>
+                    </div>
+                </div>
             </nav>
         </div>
        <div class="navbar_wrapper flex flex-col gap-y-[17px] lg:gap-y-0 lg:static absolute top-0 -left-full  w-[60vw] lg:w-auto bg-white z-[99998] min-h-screen lg:min-h-fit transition-all ease-out duration-500">
@@ -44,15 +57,28 @@
                             <a href="#">Blog</a>
                             <a href="#">Contact</a>
                             <a href="#">Sign in</a>
-                            <a href="#" class="hidden lg:inline-block">
-                                <form action="" class="language_picker_form">
-                                    <select name="language-picker-select" id="language-picker-select" class="border-0 p-2 focus:border-none focus:ring-0">
-                                      <option lang="en" value="english" selected>EN</option>
-                                      <option lang="de" value="deutsch">DE</option>
-                                      <option lang="fr" value="francais">FR</option>
-                                    </select>
-                                </form>                                
-                            </a>
+                            <span class="hidden lg:inline-block">
+                                <div id="languagePickerDsk" class="relative inline-block">
+                                    <div id="languagePickerButton" class="bg-white text-gray-800 font-semibold py-2 px-3 flex items-center gap-x-2  focus:outline-none">
+                                        <img src="./src/img/uk.svg" alt="English Flag" class="selectedLanImg w-6 h-4">
+                                        <span class="selectedLan mr-2">En</span>
+                                    </div>
+                                    <div id="languageDropdownDsk" class="absolute hidden mt-2">
+                                        <div class="item bg-teal-500 hover:bg-[#d5d1d1] text-gray-800 font-semibold py-2 px-3 flex items-center gap-x-2  focus:outline-none">
+                                            <img src="./src/img/uk.svg" alt="English Flag" class="selectedLanImg w-6 h-4">
+                                            <span class="selectedLan mr-2">Bn</span>
+                                        </div>
+                                        <div class="item bg-teal-500 hover:bg-[#fff] text-gray-800 font-semibold py-2 px-3 flex items-center gap-x-2  focus:outline-none">
+                                            <img src="./src/img/uk.svg" alt="English Flag" class="selectedLanImg w-6 h-4">
+                                            <span class="selectedLan mr-2">De</span>
+                                        </div>
+                                        <div class="item bg-teal-500 hover:bg-[#fff] text-gray-800 font-semibold py-2 px-3 flex items-center gap-x-2  focus:outline-none">
+                                            <img src="./src/img/uk.svg" alt="English Flag" class="selectedLanImg w-6 h-4">
+                                            <span class="selectedLan mr-2">Fr</span>
+                                        </div>
+                                    </div>
+                                </div>                               
+                            </span>
                         </div>
                     </div>
                 </div>
@@ -170,7 +196,7 @@
         <div class="row">
             <div class="container">
                 <div class="col flex items-center justify-center flex-wrap gap-10">
-                    <div class="card bg-white rounded-lg shadow w-full max-w-[450px] p-[60px]">
+                    <div class="card bg-white rounded-lg shadow w-full max-w-[400px] lg:max-w-[500px] p-[60px]">
                         <span class="card_icon h-[35px]"><img class="mb-5" src="./src/img/card_icon1.png" alt="icon"></span>
                         <h1 class="text-primary font-inter text-[26px] max-w-[280px] font-semibold leading-[36px] mb-[32px]">Standard Translation from £30.00 / page</h1>
                         <p class="text-primary font-inter text-xl leading-[30px] font-normal mb-5">Suitable for straightforward personal documents, including birth, marriage, police or academic certificates.</p>
@@ -201,7 +227,7 @@
                             <a href="#"><span class="text-primary font-inter text-base font-semibold underline">Learn more</span></a>
                         </div>
                     </div>
-                    <div class="card bg-white rounded-lg shadow w-full max-w-[450px] p-[60px]">
+                    <div class="card bg-white rounded-lg shadow w-full max-w-[400px] lg:max-w-[500px] p-[60px]">
                         <span class="card_icon h-[35px] mb-5"><img class="mb-5" src="./src/img/card_icon2.png" alt="icon"></span>
                         <h1 class="text-primary font-inter text-[26px] max-w-[280px] font-semibold leading-[36px] mb-[32px]">Standard Translation from £30.00 / page</h1>
                         <p class="text-primary font-inter text-xl leading-[30px] font-normal mb-5">Suitable for straightforward personal documents, including birth, marriage, police or academic certificates.</p>
